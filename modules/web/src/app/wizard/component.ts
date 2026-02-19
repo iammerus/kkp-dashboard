@@ -148,7 +148,7 @@ export class WizardComponent implements OnInit, OnDestroy {
       this.loadingClusterTemplate = false;
     }
 
-    if (this.wizardMode === WizardMode.CustomizeClusterTemplate || this.wizardMode === WizardMode.CreateUserCluster) {
+    if (this.wizardMode === WizardMode.CustomizeClusterTemplate || this.wizardMode === WizardMode.CreateUserCluster || !this.wizardMode) {
       this._quotaCalculationService
         .getQuotaExceed()
         .pipe(takeUntil(this._unsubscribe))
